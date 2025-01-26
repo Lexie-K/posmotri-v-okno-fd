@@ -357,6 +357,5 @@ a:focus {
 
 .preloader,
 .error {
-  position: absolute;
   z-index: 1;
 }
