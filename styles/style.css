@@ -8,6 +8,10 @@ html {
   block-size: 100%;
 }
 
+body {
+  font-family: 'Fira Sans Condensed', Arial, Helvetica, sans-serif;
+}
+
 h1,
 h2,
 h3,
@@ -66,7 +70,6 @@ a:focus {
   align-items: center;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
   inline-size: 1200px;
@@ -76,7 +79,6 @@ a:focus {
 .content {
   display: grid;
   grid-template-columns: 711px 399px;
-  grid-template-rows: 534px;
   grid-template-areas: 'current_video more_videos';
   align-items: end;
   column-gap: 30px;
@@ -95,9 +97,9 @@ a:focus {
 }
 
 .result__video {
-  width: 711px;
-  height: 386px;
   object-fit: cover;
+  inline-size: 711px;
+  block-size: 386px;
 }
 
 .search-form {
@@ -113,7 +115,6 @@ a:focus {
 .search-form__fieldset-title {
   padding-bottom: 5px;
   color: #fff;
-  font-family: 'Fira Sans Condensed';
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
@@ -122,6 +123,7 @@ a:focus {
 
 .search-form__label {
   display: flex;
+  align-items: flex-start;
 }
 
 .visually-hidden {
@@ -140,8 +142,7 @@ a:focus {
   border-top: 1px solid white;
   border-bottom: 1px solid white;
   overflow: hidden;
-  color: rgba(255, 255, 255, 0.7);
-  font-family: 'Fira Sans Condensed';
+  color: #fff;
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
@@ -170,7 +171,6 @@ a:focus {
 
 .search-form__label-text {
   color: #fff;
-  font-family: 'Fira Sans Condensed';
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
@@ -179,9 +179,8 @@ a:focus {
 }
 
 .button {
-  border: 1px solid white;
+  border: 1px solid currentColor;
   color: #fff;
-  font-family: 'Fira Sans Condensed';
   font-weight: 700;
   font-size: 18px;
   line-height: 110%;
@@ -202,7 +201,7 @@ a:focus {
 
 .title {
   color: #fff;
-  font-family: 'Oswald';
+  font-family: 'Oswald', Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 94%;
@@ -251,7 +250,7 @@ a:focus {
   padding-bottom: 6px;
   overflow: hidden;
   color: #fff;
-  font-family: 'Oswald';
+  font-family: 'Oswald', Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 100%;
@@ -266,7 +265,6 @@ a:focus {
   display: -webkit-box;
   overflow: hidden;
   color: #fff;
-  font-family: 'Fira Sans Condensed';
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
@@ -341,21 +339,20 @@ a:focus {
   outline-offset: 1px;
 }
 
-.content__list-item:hover {
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.content__card-link:hover {
   text-decoration: underline #fff 2px;
   text-decoration-skip-ink: none;
   text-underline-offset: 0.5px;
 }
 
-.content__list-item:has(:focus-visible) {
+.content__card-link:has(:focus-visible) {
   border: 1px solid #fff;
 }
 
-.content__card-link_current {
+.content__card-link:active {
   background-color: #545050;
-}
-
-.preloader,
-.error {
-  z-index: 1;
 }
